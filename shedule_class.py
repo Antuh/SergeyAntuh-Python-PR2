@@ -3,7 +3,7 @@ znach: list = ['б', 'в', 'г', 'д', 'ж', 'з', 'й', 'л', 'к', 'н', 'м',
 
 class FileShedule(FileSystemEventHandler):
     def on_created(self, event):
-        file_name: str = event.spc_path.split("\\")
+        file_name: str = event.src_path.split("\\")
         name: str = file_name[-1].split(".")
         name_second: str = name[0]
         name_second.lower()
